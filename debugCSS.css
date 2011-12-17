@@ -160,7 +160,7 @@ table[width]:after {
 
 img:not([alt]):after {
   background: #FFFF88;
-  content: 'Image does not have an ALT attribute.';
+  content: '"img"标签缺少"alt"t属性.';
 }
 
 a[href="#"]:after,
@@ -174,17 +174,17 @@ a[onclick]:after,
 a[onmouseover]:after,
 a[onmouseout]:after {
   background: #FFFF88;
-  content: 'Inline JS on anchor.';
+  content: '"a"标签上存在内联脚本.';
 }
 
 label:not([for]):after {
   background: #FFFF88;
-  content: 'Should LABEL have a FOR attribute?';
+  content: '"label"标签缺少"for"属性.';
 }
 
 nav:not([role]):after {
   background: #FFFF88;
-  content: 'NAV element should have a ROLE attribute.';
+  content: '"nav"标签缺少"role"属性.';
 }
 
 div[role="img"]:not([aria-label]):after {
@@ -207,18 +207,18 @@ html[xmlns] a h4:after,
 html[xmlns] a h5:after,
 html[xmlns] a h6:after {
   background: #FFFF88;
-  content: 'Block level element within inline element.';
+  content: '内联元素中不能套嵌块级元素.';
 }
 
 ol > *:not(li):after,
 ul > *:not(li):after {
   background: #FFFF88;
-  content: 'Only LIs can be children of UL or OL';
+  content: '标签"ul"和"ol"的子元素必须为"li"标签.';
 }
 
 dl > *:not(dt):not(dd):after {
   background: #FFFF88;
-  content: 'Only DT/DD can be children of a DL';
+  content: '标签"dl"的子元素必须为"dt"标签或者"dd"标签.';
 }
 
 form > *:not(fieldset):after {
