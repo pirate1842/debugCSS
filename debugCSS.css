@@ -109,7 +109,7 @@ marquee:after {
 
 table:not([summary]):after {
   background: #88FF88;
-  content: '请尝试在"table"标签内用使用"summary"标签定义内容简介.';
+  content: '请尝试在"table"标签上使用"summary"属性来定义内容概述.';
 }
 
 table > tr:after {
@@ -162,7 +162,7 @@ table[width]:after {
 
 img:not([alt]):after {
   background: #FFFF88;
-  content: '"img"标签缺少"alt"t属性.';
+  content: '"img"标签缺少"alt"属性.';
 }
 
 a[href="#"]:after,
