@@ -124,7 +124,7 @@ table th:not([scope]):after {
 
 table thead td:after {
   background: #88FF88;
-  content: '"thead"标签内请使用"th"标签定义单元格.';
+  content: '请尝试在"thead"标签内使用"th"标签来定义单元格.';
 }
 
 table > tbody:first-child:after {
@@ -137,11 +137,13 @@ table > tbody + tfoot:after {
   content: '"tbody"标签必须在"tfoot"标签之前.';
 }
 
+/*
 table > tr:first-child:last-child:after,
 table > tbody > tr:first-child:last-child:after {
   background: #88FF88;
   content: 'Only one TR in TABLE.  Are you using it for layout?';
 }
+*/
 
 table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after {
   background: #FFFF88;
