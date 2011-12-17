@@ -109,12 +109,12 @@ marquee:after {
 
 table:not([summary]):after {
   background: #88FF88;
-  content: 'Should you have a SUMMARY attribute on your TABLE?';
+  content: '请尝试在"table"标签内用使用"summary"标签定义内容简介.';
 }
 
 table > tr:after {
   background: #FFFF88;
-  content: 'TABLE does not have a TBODY.';
+  content: '"table"标签内缺少"tbody"标签.';
 }
 
 table th:not([scope]):after {
@@ -124,24 +124,26 @@ table th:not([scope]):after {
 
 table thead td:after {
   background: #88FF88;
-  content: 'Cells in THEAD should be TH.';
+  content: '请尝试在"thead"标签内使用"th"标签来定义单元格.';
 }
 
 table > tbody:first-child:after {
   background: #88FF88;
-  content: 'Do you need a THEAD or TFOOT?';
+  content: '请尝试在"table"标签内使用"thead"标签和"tfoot"标签.';
 }
 
 table > tbody + tfoot:after {
   background: #FFFF88;
-  content: 'TBODY should come after TFOOT.';
+  content: '"tbody"标签必须在"tfoot"标签之前.';
 }
 
+/*
 table > tr:first-child:last-child:after,
 table > tbody > tr:first-child:last-child:after {
   background: #88FF88;
   content: 'Only one TR in TABLE.  Are you using it for layout?';
 }
+*/
 
 table > *:not(thead):not(tfoot):not(tbody):not(tr):not(colgroup):not(caption):after {
   background: #FFFF88;
@@ -155,7 +157,7 @@ table[cellpadding]:after,
 table[cellspacing]:after,
 table[width]:after {
   background: #FFFF88;
-  content: 'Element has inline style.';
+  content: '在"table"标签内定义了内联样式.';
 }
 
 img:not([alt]):after {
@@ -166,7 +168,7 @@ img:not([alt]):after {
 a[href="#"]:after,
 a:not([href]):after {
   background: #FFFF88;
-  content: 'Anchor tag is # or does not exist - does not degrade gracefully.';
+  content: '"a"标签缺少"href"属性，或者"href"属性的值为:"#".';
 }
 
 a[href*=javascript\:]:after,
@@ -207,62 +209,65 @@ html[xmlns] a h4:after,
 html[xmlns] a h5:after,
 html[xmlns] a h6:after {
   background: #FFFF88;
-  content: '内联元素中不能套嵌块级元素.';
+  content: '内联元素内不能套嵌块级元素.';
 }
 
 ol > *:not(li):after,
 ul > *:not(li):after {
   background: #FFFF88;
-  content: '标签"ul"和"ol"的子元素必须为"li"标签.';
+  content: '"ul"标签和"ol"标签的子元素必须为"li"标签.';
 }
 
 dl > *:not(dt):not(dd):after {
   background: #FFFF88;
-  content: '标签"dl"的子元素必须为"dt"标签或者"dd"标签.';
+  content: 'dl"标签"的子元素必须为"dt"标签或者"dd"标签.';
 }
 
 form > *:not(fieldset):after {
   background: #88FF88;
-  content: 'Should you be using a FIELDSET?';
+  content: '请尝试在"form"标签内使用"fieldset"标签来进行表单元素的分组.';
 }
 
 fieldset > *:not(legend):first-child:after {
   background: #88FF88;
-  content: 'Should your FIELDSET be using a LEGEND?';
+  content: '请尝试在"fieldset"标签内使用"legend"标签来定义分组的标题.';
 }
 
 iframe:not([title]):after {
   background: #88FF88;
-  content: 'IFRAME lacks TITLE attribute.';
+  content: '"请尝试为iframe"标签添加"title"属性.';
 }
 
 center:after,
 u:after,
 font:after {
   background: #FFFF88;
-  content: 'Deprecated tag used.';
+  content: '已经不推荐使用的标签.';
 }
 
 /* These may not be "wrong", but let's bug you anyway. */
 map:after {
   background: #88FF88;
-  content: 'Is MAP appropriate here?';
+  content: '请尝试其它方式来实现"map"标签的功能.';
 }
 
 br + *:not(br):before {
   background: #88FF88;
-  content: 'Is BR appropriate here?';
+  content: '请尝试其它方式来实现"br"标签的功能.';
 }
 
 br + br + *:before {
   background: #88FF88;
-  content: 'Should you be using a P tag?';
+  content: '请尝试使用"p"标签来实现段落间的换行.';
 }
 
-b:after,
 i:after {
   background: #88FF88;
-  content: 'Should you be using STRONG or EM?';
+  content: '请尝试使用"em"标签来代替"i"标签.';
+}
+b:after {
+  background: #88FF88;
+  content: '请尝试使用"strong"标签来代替"b"标签.';
 }
 
 blink:after,
